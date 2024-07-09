@@ -196,6 +196,7 @@ title(c,'(km/s)')
 
 sgtitle('After 5000 iterations')
 
+%%
 %% Section II: Ridgecrest model
 
 ha = tightPlots(1, 2, 24, [2 2], [1.0 0.8], [3 1.5], [2.5 3], 'centimeters');
@@ -261,7 +262,7 @@ smoothed_model = pgm_smoothing(Ridgecrest_overlap, beta, num_iterations);
 % Display the results
 axes(ha(1));
 %load checkerboard_seg.mat
-seg=reshape(ICM(smoothed_model,class_number,potential,maxIter), size(checkerboard_overlap));
+seg=reshape(ICM(smoothed_model,class_number,potential,maxIter), size(Ridgecrest_overlap));
 imagesc(seg,'XData', [min_lon, max_lon], 'YData', [max_lat, min_lat]);
 set(gca,'colormap',flipud(gray));
 set(gca, 'xtick',0:50:100);
@@ -292,6 +293,8 @@ title(gca,'Continuous Velocity Map')
 c = colorbar(gca);
 set(c,'Position',[0.93 0.168 0.022 0.7])
 colormap(c,'jet')
+set(gca,'clim',[1.5,3.5]);
+set(gca,'clim',[1.5,3.5]);
 title(c,'(km/s)')
 
 sgtitle('After 50 iterations')
@@ -306,7 +309,7 @@ smoothed_model = pgm_smoothing(Ridgecrest_overlap, beta, num_iterations);
 
 % Display the results
 axes(ha(1));
-seg=reshape(ICM(smoothed_model,class_number,potential,maxIter), size(checkerboard_overlap));
+seg=reshape(ICM(smoothed_model,class_number,potential,maxIter), size(Ridgecrest_overlap));
 imagesc(seg,'XData', [min_lon, max_lon], 'YData', [max_lat, min_lat]);
 set(gca,'colormap',flipud(gray));
 set(gca, 'xtick',0:50:100);
@@ -337,6 +340,8 @@ title(gca,'Continuous Velocity Map')
 c = colorbar(gca);
 set(c,'Position',[0.93 0.168 0.022 0.7])
 colormap(c,'jet')
+set(gca,'clim',[1.5,3.5]);
+set(gca,'clim',[1.5,3.5]);
 title(c,'(km/s)')
 
 sgtitle('After 500 iterations')
@@ -352,7 +357,7 @@ smoothed_model = pgm_smoothing(Ridgecrest_overlap, beta, num_iterations);
 
 % Display the results
 axes(ha(1));
-seg=reshape(ICM(smoothed_model,class_number,potential,maxIter), size(checkerboard_overlap));
+seg=reshape(ICM(smoothed_model,class_number,potential,maxIter), size(Ridgecrest_overlap));
 imagesc(seg,'XData', [min_lon, max_lon], 'YData', [max_lat, min_lat]);
 set(gca,'colormap',flipud(gray));
 set(gca, 'xtick',0:50:100);
@@ -383,6 +388,8 @@ title(gca,'Continuous Velocity Map')
 c = colorbar(gca);
 set(c,'Position',[0.93 0.168 0.022 0.7])
 colormap(c,'jet')
+set(gca,'clim',[1.5,3.5]);
+set(gca,'clim',[1.5,3.5]);
 title(c,'(km/s)')
 
 sgtitle('After 5000 iterations')
